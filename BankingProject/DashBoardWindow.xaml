@@ -1,0 +1,52 @@
+﻿<Window x:Class="BankingProject.DashBoardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankingProject"
+        mc:Ignorable="d"
+        Title="DashBoardWindow" Height="450" Width="800" Closed="Window_Closed_1">
+    <Grid MaxWidth="1200">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <DockPanel LastChildFill="True">
+            <TextBlock Text="DashBoard" TextAlignment="Center" FontSize="32" DockPanel.Dock="Top" FontWeight="bold" Grid.Row="0" Background="ForestGreen" Margin="0 0 0 100"/>
+        </DockPanel>
+
+       
+        <Grid Grid.Row="1" Margin="10 20 10 10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Border x:Name="brd1" Grid.Column="0" CornerRadius="2" Background="ForestGreen" BorderThickness="1" BorderBrush="gray">
+                <StackPanel Margin="10 10 10 10">
+                    <TextBlock FontWeight="bold" FontSize="10" Margin="10 10 10 2">Your Balance</TextBlock>
+                    <TextBlock  FontSize="42" Margin="30 2 10 2" Foreground="YellowGreen">$500</TextBlock>
+                </StackPanel>
+            </Border>
+
+            <Button x:Name="btnDeposit" Grid.Column="1" Margin="20 0 0 0" Content="Deposit" FontSize="12"
+                  Background="ForestGreen" FontWeight="Bold"
+                  Foreground="black"
+                    Click="btnDeposit_Click"/>
+
+
+            <Button x:Name="btnWithdraw" Grid.Column="2" Margin="20 0 0 0" Content="Withdraw" FontSize="12"
+                       Background="ForestGreen" FontWeight="Bold"
+                        Foreground="black"
+                    Click="btnWithdraw_Click"/>
+
+            <Button x:Name="btnManager" Grid.Column="3" Margin="20 0 0 0" Content="Account Manager" FontSize="12"
+           Background="ForestGreen" FontWeight="Bold"
+            Foreground="black"
+                    Click="btnManager_Click"/>
+        </Grid>
+
+    </Grid>
+</Window>

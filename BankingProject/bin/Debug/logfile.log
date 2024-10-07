@@ -1,0 +1,4 @@
+2024-10-07 06:06:50,892 [1] INFO  BankingProject.Logger - Deposited 4567 rupees Successfully to account 99999
+2024-10-07 06:08:04,125 [1] ERROR BankingProject.Logger - Insufficient balance
+2024-10-07 06:08:53,427 [1] INFO  BankingProject.Logger - An account with acoount number 0 has been created successfully
+2024-10-07 06:09:14,399 [1] INFO  BankingProject.Logger - Account 0 is updated successfully

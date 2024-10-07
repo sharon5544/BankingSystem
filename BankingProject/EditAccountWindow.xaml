@@ -1,0 +1,46 @@
+﻿<Window x:Class="BankingProject.EditAccountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BankingProject"
+        mc:Ignorable="d"
+        Title="EditAccountWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Canvas>
+        <TextBlock x:Name="lblAccountNumber" TextWrapping="Wrap" Text="Account Number"  Canvas.Left="150" Canvas.Top="86" Width="103" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="lblName" TextWrapping="Wrap" Text="Name" Canvas.Left="150" Canvas.Top="123" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <RadioButton Content="Savings" Canvas.Left="378" Canvas.Top="163" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+        <RadioButton Content="Currrent" Canvas.Left="465" Canvas.Top="163" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+        <TextBlock x:Name="lblType" TextWrapping="Wrap" Text="Account Type" Canvas.Left="150" Canvas.Top="162" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="lblEmail" TextWrapping="Wrap" Text="Email" Canvas.Left="150" Canvas.Top="199" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="lblPhoneNumber" TextWrapping="Wrap" Text="Phone Number" Canvas.Left="150" Canvas.Top="232" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="lblAddress" TextWrapping="Wrap" Text="Address" Canvas.Left="151" Canvas.Top="263" RenderTransformOrigin="0.56,2.935" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <CheckBox Content="IsActive" Canvas.Left="378" Canvas.Top="301" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+        <ComboBox  Width="120" Canvas.Left="378" Canvas.Top="349" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False">
+            <ComboBoxItem Content="1%"/>
+            <ComboBoxItem Content="2%"/>
+            <ComboBoxItem Content="3%"/>
+            <ComboBoxItem Content="4%"/>
+            <ComboBoxItem Content="5%"/>
+            <ComboBoxItem Content="6%"/>
+            <ComboBoxItem Content="7%"/>
+            <ComboBoxItem Content="8%"/>
+            <ComboBoxItem Content="9%"/>
+            <ComboBoxItem Content="10%"/>
+            <ComboBoxItem Content="11%"/>
+            <ComboBoxItem Content="12%"/>
+            
+
+
+        </ComboBox>
+        <TextBox x:Name="txtAccountNumber" TextWrapping="Wrap" Width="120" Canvas.Left="378"  Text="{Binding SelectedAccount.AccNo}" Canvas.Top="85" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="txtName" TextWrapping="Wrap" Width="120"  Text="{Binding SelectedAccount.Name}" Canvas.Left="378" Canvas.Top="121" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="txtEmail"  Text="{Binding SelectedAccount.Email}" TextWrapping="Wrap" Width="120" Canvas.Left="378" Canvas.Top="199" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="txtPhoneNumber"  Text="{Binding SelectedAccount.PhoneNumber}" TextWrapping="Wrap" Width="120" Canvas.Left="378" Canvas.Top="230" HorizontalAlignment="Center" VerticalAlignment="Center" IsEnabled="False"/>
+        <TextBox x:Name="txtAddress"  Text="{Binding SelectedAccount.Address}" TextWrapping="Wrap" Width="120" Canvas.Left="378" Canvas.Top="261" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="lblStatus"  TextWrapping="Wrap" Text="Status" Canvas.Left="151" Canvas.Top="303" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <TextBlock x:Name="lblPercentage" TextWrapping="Wrap" Text="Interest Percentage" Canvas.Left="151" Canvas.Top="347" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btnUpdate" Content="Update" Canvas.Left="301" Canvas.Top="393" HorizontalAlignment="Left" VerticalAlignment="Center" Width="60" Command="{Binding UpdateCommand}" />
+
+    </Canvas>
+</Window>
