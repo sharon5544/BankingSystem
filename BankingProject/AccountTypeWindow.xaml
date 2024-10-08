@@ -1,0 +1,23 @@
+﻿
+
+<Window x:Class="BankingProject.AccountTypeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        xmlns:local="clr-namespace:BankingProject"
+        d:DataContext="{d:DesignInstance Type=local:AccountTypeViewModel}"
+        mc:Ignorable="d"
+        Title="AccountTypeWindow" Height="450" Width="800" Closing="Window_Closing">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        <oxy:PlotView x:Name="plotview" Height="300" Width="500" Model="{Binding PieChartModel}"/>
+
+
+        <ListBox x:Name="lstAccountTypes" Grid.Column="1" ItemsSource="{Binding Accounts}" />
+    </Grid>
+</Window>
